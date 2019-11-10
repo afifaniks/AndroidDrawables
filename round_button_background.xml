@@ -1,0 +1,30 @@
+<!-- MULTI LAYERED BUTTON STYLE WITH PRESS STATE -->
+<!-- CHANGE @COLOR_PRESSED/NOT_PRESSED and @DRAWABLE_PATH AS PER NEED-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android = "http://schemas.android.com/apk/res/android">
+<item android:state_pressed = "false">
+    <layer-list>
+        <item>
+            <shape android:shape = "rectangle">
+                <size android:width="80dp" android:height="80dp"/>
+                <solid android:color ="@COLOR_NOT_PRESSED"/>
+                <corners android:radius="40dp"/>
+            </shape>
+        </item>
+        <item android:drawable="@DRAWABLE_PATH" android:height="30dp" android:width="30dp" android:gravity="center"/>
+    </layer-list>
+</item>
+    <item android:state_pressed = "true">
+        <layer-list>
+            <item>
+                <shape android:shape = "rectangle">
+                    <size android:width="80dp" android:height="80dp"/>
+                    <solid android:color ="@COLOR_PRESSED"/>
+                    <corners android:radius="40dp"/>
+                </shape>
+            </item>
+            <item android:drawable="@DRAWABLE_PATH" android:height="30dp" android:width="30dp" android:gravity="center"/>
+        </layer-list>
+    </item>
+</selector>
